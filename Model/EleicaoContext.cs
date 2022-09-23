@@ -10,7 +10,7 @@ namespace APIEleicao.Model
 {
     public class EleicaoContext : DbContext
     {
-        //public EleicaoContext() { }
+        //public EleicaoContext() { } 
 
         public EleicaoContext(DbContextOptions<EleicaoContext> options) : base(options)
         {
