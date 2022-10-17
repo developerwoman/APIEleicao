@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\T807409\\source\\repos\\APIEleicao\\APIEleicao.csproj": {}
+    "C:\\Users\\oswal\\Source\\Repos\\APIEleicao\\APIEleicao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\T807409\\source\\repos\\APIEleicao\\APIEleicao.csproj": {
+    "C:\\Users\\oswal\\Source\\Repos\\APIEleicao\\APIEleicao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\T807409\\source\\repos\\APIEleicao\\APIEleicao.csproj",
+        "projectUniqueName": "C:\\Users\\oswal\\Source\\Repos\\APIEleicao\\APIEleicao.csproj",
         "projectName": "APIEleicao",
-        "projectPath": "C:\\Users\\T807409\\source\\repos\\APIEleicao\\APIEleicao.csproj",
-        "packagesPath": "C:\\Users\\T807409\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\T807409\\source\\repos\\APIEleicao\\obj\\",
+        "projectPath": "C:\\Users\\oswal\\Source\\Repos\\APIEleicao\\APIEleicao.csproj",
+        "packagesPath": "C:\\Users\\oswal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oswal\\Source\\Repos\\APIEleicao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\T807409\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\oswal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\T807409\\source\\repos\\SCPMaster\\packages\\GTiSolution.V10215": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -72,7 +71,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

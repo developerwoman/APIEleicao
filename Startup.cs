@@ -39,7 +39,7 @@ namespace APIEleicao
 
             //services.AddDbContext<EleicaoContext>(x => x.UseSqlServer("DefaultConnection",null));
             services.AddScoped<ICandidatoRepository, CandidatoRepository>();
-            services.AddScoped<IVotoRepository, VotoRepository>();
+            //services.AddScoped<IVotoRepository, VotoRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

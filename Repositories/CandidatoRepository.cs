@@ -33,9 +33,9 @@ namespace APIEleicao.Repositories
                 var candidatoDetail = _context.Candidatos.Where(w => w.Id_candidato == Id_candidato);
 
 
-                _context.Remove(candidatoDelete.Id_candidato);
-                _context.Remove(candidatoDetail);
-
+                //_context.Remove(candidatoDelete.Id_candidato);
+                _context.Remove(candidatoDelete);
+               
                 await _context.SaveChangesAsync();
             }
             catch (InvalidOperationException inv)

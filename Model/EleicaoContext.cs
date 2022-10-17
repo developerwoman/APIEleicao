@@ -27,7 +27,7 @@ namespace APIEleicao.Model
         }
 
         public DbSet<Candidato> Candidatos { get; set; }
-        public DbSet<Voto> Votos { get; set; }
+        //public DbSet<Voto> Votos { get; set; }
         
 
 
@@ -46,27 +46,27 @@ namespace APIEleicao.Model
             });
         }
 
-        private void ConfigVoto(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Voto>(etd =>
-            {
-                etd.ToTable("Voto");
-                etd.HasNoKey();
-                etd.Property(p => p.Id_candidato).HasColumnName("ID_CANDIDATO").HasMaxLength(200);
-                etd.Property(p => p.Data_registro).HasColumnName("DATA_REGISTRO").ValueGeneratedOnAdd();
-                //etd.HasOne(c => c.Candidato).WithMany(p => p.Votos);
+        //private void ConfigVoto(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Voto>(etd =>
+        //    {
+        //        etd.ToTable("Voto");
+        //        etd.HasNoKey();
+        //        etd.Property(p => p.Id_candidato).HasColumnName("ID_CANDIDATO").HasMaxLength(200);
+        //        etd.Property(p => p.Data_registro).HasColumnName("DATA_REGISTRO").ValueGeneratedOnAdd();
+        //        //etd.HasOne(c => c.Candidato).WithMany(p => p.Votos);
 
-            });
-        }
+        //    });
+        //}
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.UseIdentityColumns();
-            modelBuilder.HasDefaultSchema("Eleicoes");
+            modelBuilder.HasDefaultSchema("ESTUDOS");
 
             ConfigCandidato(modelBuilder);
-            ConfigVoto(modelBuilder);
+            //ConfigVoto(modelBuilder);
         }
     }
 }

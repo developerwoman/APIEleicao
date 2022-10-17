@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\VotoController.cs" />
+    <Compile Remove="Model\Voto.cs" />
     <Compile Remove="Principal.cs" />
+    <Compile Remove="Repositories\IVotoRepository.cs" />
+    <Compile Remove="Repositories\VotoRepository.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -15,13 +15,18 @@ namespace APIEleicao.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("Eleicoes")
+                .HasDefaultSchema("ESTUDOS")
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("APIEleicao.Model.Candidato", b =>
                 {
+                    b.Property<int>("Id_candidato")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
                     b.Property<string>("Codigo")
                         .HasMaxLength(2)
                         .HasColumnType("nvarchar(2)")
@@ -31,11 +36,6 @@ namespace APIEleicao.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasColumnName("DATA_REGISTRO");
-
-                    b.Property<Guid>("Id_candidato")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("ID_CANDIDATO");
 
                     b.Property<string>("Legenda")
                         .HasMaxLength(100)
@@ -52,25 +52,9 @@ namespace APIEleicao.Migrations
                         .HasColumnType("nvarchar(200)")
                         .HasColumnName("VICE");
 
+                    b.HasKey("Id_candidato");
+
                     b.ToTable("Candidato");
-                });
-
-            modelBuilder.Entity("APIEleicao.Model.Voto", b =>
-                {
-                    b.Property<DateTime>("Data_registro")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasColumnName("DATA_REGISTRO");
-
-                    b.Property<int>("Id_candidato")
-                        .HasMaxLength(200)
-                        .HasColumnType("int")
-                        .HasColumnName("ID_CANDIDATO");
-
-                    b.Property<Guid>("Id_voto")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.ToTable("Voto");
                 });
 #pragma warning restore 612, 618
         }

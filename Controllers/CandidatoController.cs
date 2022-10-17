@@ -56,11 +56,13 @@ namespace APIEleicao.Controllers
         {
             var returnDelete = await _candidatoRepository.GetById(Id_candidato);
 
-            if (returnDelete == null)
-                return NotFound();
+            if (returnDelete != null)
+            {
+                await _candidatoRepository.Delete(Id_candidato);
+                return NoContent();
+            }
 
-            await _candidatoRepository.Delete(Id_candidato);
-            return NoContent();
+            return NotFound();
         }
     }
 }
