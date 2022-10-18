@@ -4,14 +4,16 @@ using APIEleicao.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace APIEleicao.Migrations
 {
     [DbContext(typeof(EleicaoContext))]
-    partial class EleicaoContextModelSnapshot : ModelSnapshot
+    [Migration("20221017180726_CampoPartido")]
+    partial class CampoPartido
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,21 +60,6 @@ namespace APIEleicao.Migrations
                     b.HasKey("Id_candidato");
 
                     b.ToTable("Candidato");
-                });
-
-            modelBuilder.Entity("APIEleicao.Model.Marca", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("Descricao")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Marcas");
                 });
 #pragma warning restore 612, 618
         }

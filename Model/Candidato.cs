@@ -15,6 +15,7 @@ namespace APIEleicao.Model
         public string Codigo { get; set; }
         public string Legenda { get; set; }
         public DateTime Data_registro { get; set; }
+        public string Partido { get; set; }
         //public IEnumerable<Voto> Votos { get; set; }
     }
 }

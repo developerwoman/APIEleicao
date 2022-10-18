@@ -47,8 +47,6 @@ namespace APIEleicao.Repositories
             {
                 throw new Exception(ex.Message);
             }
-
-
         }
 
         public async Task<IEnumerable<Candidato>> Get()

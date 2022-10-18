@@ -4,14 +4,16 @@ using APIEleicao.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace APIEleicao.Migrations
 {
     [DbContext(typeof(EleicaoContext))]
-    partial class EleicaoContextModelSnapshot : ModelSnapshot
+    [Migration("20221017235949_marca")]
+    partial class marca
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -27,8 +27,9 @@ namespace APIEleicao.Model
         }
 
         public DbSet<Candidato> Candidatos { get; set; }
+        public DbSet<Marca> Marcas { get; set; }
         //public DbSet<Voto> Votos { get; set; }
-        
+
 
 
         private void ConfigCandidato(ModelBuilder modelBuilder)
