@@ -28,11 +28,11 @@ jobs:
 
       # build image
       - name: Build Docker image
-        run: docker build -t dockerfile .
+        run: docker build -t $IMAGE_NAME .
 
       # push image to registry
       - name: Push Docker image
-        run: docker push dockerfile
+        run: docker push $IMAGE_NAME
 
       # deploy image
       - name: Deploy Docker image
