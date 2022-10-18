@@ -28,7 +28,7 @@ jobs:
 
       # build image
       - name: Build Docker image
-        run: docker build -t APIEleicao/.github/workflows/ .
+        run: docker build -t apieleicao/.github/workflows/ .
 
       # push image to registry
       - name: Push Docker image
